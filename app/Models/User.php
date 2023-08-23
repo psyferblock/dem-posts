@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'username' // we added the user name here ( looks a lot like type safety procedure ) this model will have all the info we will need so when creating it as devs it will allow us to see where we make mistakes before we move on to another piece of code.
     ];
 
     /**

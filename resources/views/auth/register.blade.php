@@ -23,10 +23,7 @@ i imagine there is also one that we can do for a footer  -->
                     </div>
                     <div class="mb-4"> 
                          <label for="username" class="sr-only">Username</label>
-                         <!-- the value we insert the old(' ') helper that connects to the name of hte input so it stores the last saved inpur.( state in js) -->
-                         <input type="text" name="username" id="username" placeholder="your Username" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('username') border-red-600 @enderror "
-                         value="{{old('username')}} 
-                         ">
+                         <input type="text" name="username" id="username" placeholder="your Username" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('username') border-red-600 @enderror "value="{{old('username')}} ">
                          @error('username')
                          <div class=" text-red-500 mt-2 text-sm ">
                               <!-- scoped message vsriable will be the text outputted   -->
@@ -46,7 +43,7 @@ i imagine there is also one that we can do for a footer  -->
                     </div> 
                      <div class="mb-4"> 
                          <label for="password" class="sr-only">Password</label>
-                         <input type="text" name="password" id="password" placeholder="your Password" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('password') border-red-600 @enderror "value="{{old('password')}}">
+                         <input type="password" name="password" id="password" placeholder="your Password" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('password') border-red-600 @enderror "value="{{old('password')}}">
                          @error('password')
                          <div class=" text-red-500 mt-2 text-sm ">
                               <!-- scoped message vsriable will be the text outputted   -->
@@ -56,7 +53,7 @@ i imagine there is also one that we can do for a footer  -->
                     </div>
                     <div class="mb-4"> 
                          <label for="password_confirmation" class="sr-only">repeat password</label>
-                         <input type="text" name="password_confirmation" id="password_confirmation" placeholder="Repeat your Password" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('password_confirmation') border-red-600 @enderror "value="{{old('password_confirmation')}}">
+                         <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Repeat your Password" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('password_confirmation') border-red-600 @enderror "value="{{old('password_confirmation')}}">
                          @error('password_confirmation')
                          <div class=" text-red-500 mt-2 text-sm ">
                               <!-- scoped message vsriable will be the text outputted   -->
