@@ -5,29 +5,31 @@ i imagine there is also one that we can do for a footer  -->
 @section('content')
 
      <div class="flex justify-center">
-          <div class="w-4/12 mt-6 bg-white p-6 rounded-lg">
-               Register
-               <form action="{{route('register')}}" method"post">
+          <div class="w-4/12 mt-6 bg-white p-6 rounded-lg flex justify-center">
+               <form action="{{route('register')}}" method="post">
+                    @csrf 
+                    <!-- cross site request forgery check to pass the token you can inspectt the source of hte page (/register) to see the token generated when the form is uploaded to the page -->
                     <div class="mb-4"> 
                          <label for="name" class="sr-only">Name</label>
-                         <input type="text" name="name" id="name" placeholder="your Name" class="bg-gray-100 border-2 w-fullp-4 rounded-lg"value="">
+                         <input type="text" name="name" id="name" placeholder="your Name" class="bg-gray-100 border-2 w-full p-4 rounded-lg"value="">
                     </div>
                     <div class="mb-4"> 
                          <label for="userName" class="sr-only">Username</label>
-                         <input type="text" name="userName" id="userName" placeholder="your userName" class="bg-gray-100 border-2 w-fullp-4 rounded-lg"value="">
+                         <input type="text" name="userName" id="userName" placeholder="your userName" class="bg-gray-100 border-2 w-full p-4 rounded-lg"value="">
                     </div>
                     <div class="mb-4"> 
                          <label for="email" class="sr-only">Email</label>
-                         <input type="text" name="email" id="email" placeholder="your Email" class="bg-gray-100 border-2 w-fullp-4 rounded-lg"value="">
+                         <input type="text" name="email" id="email" placeholder="your Email" class="bg-gray-100 border-2 w-full p-4 rounded-lg"value="">
                     </div> 
                      <div class="mb-4"> 
                          <label for="password" class="sr-only">Password</label>
-                         <input type="text" name="password" id="password" placeholder="your Password" class="bg-gray-100 border-2 w-fullp-4 rounded-lg"value="">
+                         <input type="text" name="password" id="password" placeholder="your Password" class="bg-gray-100 border-2 w-full p-4 rounded-lg"value="">
                     </div>
                     <div class="mb-4"> 
                          <label for="password_confirmation" class="sr-only">repeat password</label>
-                         <input type="text" name="password_confirmation" id="password_confirmation" placeholder="Repeat your Password" class="bg-gray-100 border-2 w-fullp-4 rounded-lg"value="">
+                         <input type="text" name="password_confirmation" id="password_confirmation" placeholder="Repeat your Password" class="bg-gray-100 border-2 w-full p-4 rounded-lg"value="">
                     </div>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-3 rounded font-medium w-full">Register</button>
 
                </form>
           </div>
