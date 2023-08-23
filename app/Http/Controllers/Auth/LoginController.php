@@ -13,8 +13,15 @@ class LoginController extends Controller
     }
 
 
-    public function log(){
-       // get log in info
+    public function log(Request $request){
+       //validate
+       $this->validate($request,[
+        'email'=>['required','max:255'],
+        'password'=>['required'],
+       ])
+        // get log in info
+       
+
        //check login info with db 
        //route log in info to page desired 
     }

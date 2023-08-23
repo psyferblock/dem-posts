@@ -42,6 +42,10 @@ class RegisterController extends Controller
 
 
         //->sign user in
+        // the request only method gets us back exactly what we request from the function so below itll only return email and password
+        auth()->attempt(
+            $request->only('email','password')
+        );
         // we can add the page directly in the redirect function but if we link it then we benefit from the naming . so later on even when we change the page name we wont have to go around our code to change it every where. well only do it in one place.
         return redirect()->route("dashboard");
 

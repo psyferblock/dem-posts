@@ -13,12 +13,12 @@
 <nav class="p-6 bg-white flex justify-between">
     <ul class="flex items-center">
         <li class="p-3"><a href="{{route('index')}}">Home</a></li>
-        <li class="p-3"><a href="">Dashbord</a></li>
+        <li class="p-3"><a href="{{route('dashboard')}}">Dashbord</a></li>
         <li class="p-3"><a href="">Post</a></li>
 </ul>
 <ul class="flex items-center">
         <li class="p-3"><a href="">name</a></li>
-        <li class="p-3"><a href="">login</a></li>
+        <li class="p-3"><a href="{{route('login')}}">login</a></li>
         <li class="p-3"><a href="{{route('register')}}">register</a></li>
         <li class="p-3"><a href="">logout</a></li>
 
