@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\http\Controllers\Auth\RegisterControler;
+use App\Http\Controllers\Auth\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +13,7 @@ use App\http\Controllers\Auth\RegisterControler;
 |
 */
 
-Route::get('/register',[RegisterController::class,'index']) ;// the index is referencing hte method we created in the RegisterController file
+Route::get('/register',[RegisterController::class, 'index']) -> name('register');// the index is referencing hte method we created in the RegisterController file
 
 Route::get('/posts', function () {
     return view('posts.index');

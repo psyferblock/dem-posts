@@ -7,6 +7,9 @@ i imagine there is also one that we can do for a footer  -->
      <div class="flex justify-center">
           <div class="w-6/12 mt-6 bg-white p-6 rounded-lg">
                Register
+               <form action="">
+                    
+               </form>
           </div>
      </div> 
 

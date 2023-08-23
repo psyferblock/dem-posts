@@ -19,7 +19,7 @@
 <ul class="flex items-center">
         <li class="p-3"><a href="">name</a></li>
         <li class="p-3"><a href="">login</a></li>
-        <li class="p-3"><a href="">register</a></li>
+        <li class="p-3"><a href="{{route('register')}}">register</a></li>
         <li class="p-3"><a href="">logout</a></li>
 
 </ul>
