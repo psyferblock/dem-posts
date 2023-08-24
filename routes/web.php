@@ -45,7 +45,6 @@ Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/posts',[PostsController::class, 'index']) -> name('posts');
 Route::post('/posts',[PostsController::class, 'store']);
 
-Route::post('/posts',[LoginController::class, 'store']);
 
 
 

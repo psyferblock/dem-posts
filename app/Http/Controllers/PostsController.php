@@ -9,35 +9,35 @@ use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
-    //
+    /**
+     * Display the posts index page.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
     public function index()
     {
         return view('posts.index');
     }
 
-
-
-
+    /**
+     * Store a new post.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function store(Request $request)
-{
-    // dd($request);
-    //validate 
-    $this->validate($request,[
-        'body'=> 'required '
-    ]);
+    {
+        // Validate the request
+        $validatedData = $request->validate([
+            'body' => 'required',
+        ]);
 
-    // below is a straight forward one to initiate what posts do. but a user can have many posts which means we will have to create a more eloquent model
-    // Post::create([
-    //     'user_id'=>auth()->user()->id(),
-    //     'body'=>$request->body
-    // ])
-    
-    // creating the eloquent model 
- 
-    $request->user()->posts()->create([
-    'body'=>$request->body
+        // Create a new post using the authenticated user's ID
+        $request->user()->posts()->create($validatedData);
 
-     ]); // in the user model well define the posts method.
-    return back();
-    } 
+        // Redirect back to the previous page
+        return back();
+    }
 }
+    
+
