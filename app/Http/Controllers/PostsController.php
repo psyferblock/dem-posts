@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
-// use App\Models\User;
+use App\Models\User;
 
 use Illuminate\Http\Request;
 
@@ -34,10 +34,10 @@ class PostsController extends Controller
     
     // creating the eloquent model 
  
-    request()->user()->posts()->create([
+    $request->user()->posts()->create([
     'body'=>$request->body
 
-]); // in the user model well define the posts method.
-return back();
-}
+     ]); // in the user model well define the posts method.
+    return back();
+    } 
 }

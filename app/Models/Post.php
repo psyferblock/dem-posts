@@ -11,7 +11,7 @@ class Post extends Model
 
     // the type safety for the posts 
     protected $fillable = [
-        'body',
+        'body'
     ];
     
 }

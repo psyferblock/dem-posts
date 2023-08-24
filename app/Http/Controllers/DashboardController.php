@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+
 
 class DashboardController extends Controller
 {
@@ -16,7 +18,7 @@ class DashboardController extends Controller
     }
     public function index()
     {
-    // dd(auth()->user());
+    // dd(auth()->user()->posts);
 
     return view('dashboard');
 }
