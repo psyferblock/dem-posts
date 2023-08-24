@@ -14,7 +14,7 @@
     <ul class="flex items-center">
         <li class="p-3"><a href="{{route('home')}}">Home</a></li>
         <li class="p-3"><a href="{{route('dashboard')}}">Dashbord</a></li>
-        <li class="p-3"><a href="">Post</a></li>
+        <li class="p-3"><a href="{{route('posts')}}">Post</a></li>
 </ul>
 <ul class="flex items-center">
     <!-- for authenticated users -->

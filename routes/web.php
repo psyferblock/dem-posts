@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Home\HomeController;
+use App\Http\Controllers\PostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,7 +41,11 @@ Route::post('/login',[LoginController::class, 'log']);
 //home page 
 Route::get('/',[HomeController::class,'index'])->name('home');
 
+//posts 
+Route::get('/posts',[PostsController::class, 'index']) -> name('posts');
+Route::post('/posts',[LoginController::class, 'store']);
 
-Route::get('/posts', function () {
-    return view('posts.index');
-});
+
+
+
+

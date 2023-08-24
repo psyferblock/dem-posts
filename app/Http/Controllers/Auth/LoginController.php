@@ -21,6 +21,9 @@ class LoginController extends Controller
 
 
     public function log(Request $request){
+
+        
+
        //validate
        $this->validate($request,[
         'email'=>['required','max:255'],
@@ -31,8 +34,11 @@ class LoginController extends Controller
        
 
         if(!auth()->attempt(
-            $request->only('email','password')
-        )){
+            $request->only('email','password'),
+            // were adding an argument for the auth attempt in order to remember the request of the user
+            $request->remember
+        ))
+        {
             return back()->with('status','invalid login credentials');
         }
        //route log in info to page desired 
