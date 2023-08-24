@@ -7,6 +7,10 @@
 <form action="{{route('login')}}" method="post">
     @csrf
     <div class="mb-4"> 
+     @if(session('status'))
+          <div class="bg-red-500 p-4 rounded-lg mb-6 text-white text-center"> {{session('status')}}
+          </div>
+          @endif
                          <label for="email" class="sr-only">Email</label>
                          <input type="text" name="email" id="email" placeholder="your Email" class="bg-gray-100 border-2 w-full p-4 rounded-lg 
                          @error('name') border-red-600 @enderror "value="{{old('email')}}">

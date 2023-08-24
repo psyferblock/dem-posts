@@ -18,12 +18,18 @@ class LoginController extends Controller
        $this->validate($request,[
         'email'=>['required','max:255'],
         'password'=>['required'],
-       ])
+       ]);
         // get log in info
+        //check login info with db 
        
 
-       //check login info with db 
+        if(!auth()->attempt(
+            $request->only('email','password')
+        )){
+            return back()->with('status','invalid login credentials');
+        }
        //route log in info to page desired 
+       return redirect()->route('dashboard');
     }
 }
 

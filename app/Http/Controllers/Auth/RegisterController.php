@@ -10,11 +10,19 @@ use Illuminate\Support\Facades\Hash;
 class RegisterController extends Controller
 {
     //
+    //this middleware to make sure we cant access the login page if we are not logged in
+    // its called guest because it only allows access to guests of hte website hence the cant access if logged in.
+    public function __construct()
+    {
+        $this->middleware(['guest']);
+    }
     public function index(){
+
         return view('auth.register'); // here we are setting the location of the view in advance thinking of the auth directory that has a register file waiting to beused      
     }
 
-    public function store( Request $request ){ // remember $request is the variable object from the input 
+    public function store( Request $request )
+    { // remember $request is the variable object from the input 
         //  dd('congrats you have registered'); // dd (die dump) will effectively kill the page and output anything you have there including variable or string 
 
         //VALIDATION 
