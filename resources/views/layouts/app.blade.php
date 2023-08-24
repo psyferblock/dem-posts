@@ -19,7 +19,7 @@
 <ul class="flex items-center">
     <!-- for authenticated users -->
     @auth 
-    <li class="p-3"><a href="">name</a></li>
+    <li class="p-3"><a href="">{{auth()->user()->name}}</a></li>
     <li class="p-3">
         <form action="{{route('logout')}}" method="post"  class="inline p-3"
             > 

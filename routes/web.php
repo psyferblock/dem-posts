@@ -18,8 +18,9 @@ use App\Http\Controllers\Home\HomeController;
 |
 */
 Route::get('/dashboard',[DashboardController::class, 'index']) 
-    -> name('dashboard')
-    ->middleware('auth');// the index is referencing hte method we created in the RegisterController file
+    -> name('dashboard');
+    //we could also link the name to the auth.
+    // ->middleware('auth');// the index is referencing hte method we created in the RegisterController file
 
 
 // register

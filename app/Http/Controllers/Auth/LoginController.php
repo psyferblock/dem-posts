@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 class LoginController extends Controller
 {
     //
+    //this middleware to make sure we cant access the login page if we are not logged in
+    // its called guest because it only allows access to guests of hte website hence the cant access if logged in.
+    public function __construct()
+    {
+        $this->middleware(['guest']);
+    }
+
     public function index(){
         return view('auth.login');
     }
