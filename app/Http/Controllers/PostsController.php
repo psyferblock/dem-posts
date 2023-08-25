@@ -16,7 +16,11 @@ class PostsController extends Controller
      */
     public function index()
     {
-        return view('posts.index');
+        $posts = Post::paginate(20);
+         // this gets the posts from the db
+        return view('posts.index',[
+            'posts'=> $posts
+        ]);
     }
 
     /**

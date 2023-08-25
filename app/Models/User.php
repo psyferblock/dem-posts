@@ -49,6 +49,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class); // the has many  method can have a second parameter which identifies all the connections the tables have together
     }
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
 
 }
 
