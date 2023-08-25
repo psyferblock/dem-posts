@@ -4,7 +4,7 @@
 
      <div class="flex justify-center ">
           <div class="w-8/12 mt-6 bg-white p-6 rounded-lg">
-          <!-- @auth -->
+          @auth
                 <form action="{{ route('posts') }}" method="post" class="mb-4">
                     @csrf
                     <div class="mb-4">
@@ -67,7 +67,7 @@
                     <p>there are no posts </p>
                     @endif
                 
-            <!-- @endauth -->
+            @endauth
           </div>
      </div> 
 
