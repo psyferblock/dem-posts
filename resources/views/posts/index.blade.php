@@ -45,7 +45,7 @@
 
                                 
                             <!-- for some reason we cant use delete method in html so we use method spoofing  -->
-                                <form action="{{route('posts.likes', $post}}" method="post" class="mr-1">
+                                <form action="{{route('posts.likes', $post)}}" method="post" class="mr-1">
                                     @csrf
                                     <!-- method spoofing  -->
                                     @method('DELETE')
